@@ -1,0 +1,40 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: darkgreen;
+    /* The bellow 2 lines are how one would link an image of betting table instead of the green color.
+    background-image: url("images/table.png");
+    this makes it so the image does not repeat itself when the window is larger
+    background-size: cover; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+h1 {
+    color: goldenrod;
+    
+}
+
+#message-el {
+    font-style: italic;
+}
+
+p {
+    color: white;
+}
+
+button {
+    color:#016f32;
+    width: 150px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+#start-button {
+    margin-bottom: 10px;
+}
