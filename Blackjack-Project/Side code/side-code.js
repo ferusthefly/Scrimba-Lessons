@@ -127,3 +127,60 @@ for (let i = 0; i < sentence.length; i++) {
     //the += will render out the whole string. if you just did = it would only display the one
     greetingEl.textContent += sentence[i]
 }
+
+let player1Time = 102
+let player2Time = 107
+
+function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+        return player1Time
+    } else return player2Time
+}
+
+getFastestRaceTime()
+
+//double click then cntrl + d will allow you to select and edit multiple lines matching the double clicked word.
+
+
+// Write a function that returns the total race time
+// Call/invoke the function and store the returned value in a new variable
+// Finally, log the variable out
+
+// function returnTotalRaceTime() {
+//     let totalRaceTime = player1Time + player2Time
+//     console.log(totalRaceTime)
+// } ------This is wrong because it will only work inside the function 
+
+//This is the right way to do it 
+
+//first create the function 
+function getTotalRaceTime() {
+    //use return to end the function  with the value of player1Time + player2Time
+    return player1Time + player2Time
+}
+
+//Now create a variable to hold the returned value of getTotalRaceTime()
+let totalTime = getTotalRaceTime()
+
+console.log(totalTime)
+
+
+//Math.random() generates a number between 0 and 1
+//Math.floor() removes the decimals of a number --- Math.floor(12.9) will return 12
+
+let randomNumber = Math.floor( Math.random() * 6 ) + 1
+
+console.log(randomNumber)
+
+// Create a function, rollDice(), that returns a random number between 1 and 6
+
+function rollDice() {
+    return Math.floor( Math.random() * 6 ) + 1
+}
+
+let diceRoll = rollDice()
+
+rollDice()
+rollDice()
+rollDice()
+
