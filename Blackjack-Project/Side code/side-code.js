@@ -257,3 +257,134 @@ function logData() {
 // "Per is 35 years old and lives in Norway"
 
 // Call the logData() function to verify that it works
+
+let age = 15
+
+// less than 6 years old -> free
+// 6 to 17 years old     -> child discount
+// 18 to 26 years old    -> student discount
+// 27 to 66 years old    -> full price
+// over 66 years old     -> senior citizen discount
+
+// Create a conditional statement (if/else/else if) that logs out the discount
+// the passenger will get based upon the value of the age variable
+//I tried doing stuff like if (age >= 6 || <= 17) but ran into problems. the tutorials way is simplier which I think is the way to go.
+function checkAge() {
+    if (age < 6) {
+        return "Free"
+    } else if (age < 18) {
+        return "Child Discount"
+    } else if (age < 27) {
+        return "Student Discount"
+    } else if (age < 67) {
+        return "Full Price"
+    } else {
+        return "senior citizen discount"
+    }
+}
+
+let largeCountries = ["China","India","USA","Indonesia","Pakistan"]
+
+/* Use a for loop to log the following to the console:
+
+The 5 largest countries in the world:
+- China
+- India
+- United States
+- Indinesia
+- Pakistan
+*/
+for (let i = 0; i < largeCountries.length; i ++) {
+    console.log(largeCountries[i])
+}
+
+// I made it do   the country names but not the - before each name and the title on top.
+
+//Bellow is the correct way
+let largeCountries = ["China","India","USA","Indonesia","Pakistan"]
+console.log("The 5 largest countries in the world:")
+
+for (let i = 0; i < largeCountries.length; i ++) {
+    console.log("- ", largeCountries[i])
+}
+
+let largeCountries = ["Tuvalu","India","USA","Indonesia","Monaco"]
+
+// You need to help me fixup the largeCountries array so that 
+// China and Pakistan are added back into their respective places
+
+// Use push() & pop() and their counterparts unshift() & shift()
+// Google how to use unshift() and shift()
+
+function fixString() {
+    //pop removes the last array
+    largeCountries.pop();
+    //push inserts "Pakistan" into the end of the array
+    largeCountries.push("Pakistan");
+    //shift removes the first array
+    largeCountries.shift();
+    //unshift inserts "China" into the first place of the array
+    largeCountries.unshift("China");
+    //prints largeCountries into the console
+    console.log(largeCountries);
+}
+
+let dayOfMonth = 31
+let weekday = "Friday"
+
+// If it is Friday the 13th, log out this spooky face: 😱
+// Use the logical "AND operator" -> &&
+
+function checkForSpooky() {
+    if (dayOfMonth === 31 && weekday === "Friday") {
+        return "😱😱😱😱😱"
+    } else {
+        return "Pfew, you're safe"
+    }
+}
+
+
+let hands = ["rock", "paper", "scissor"]
+
+// Create a function that returns a random item from the array
+
+function randomHand() {
+    let hand = Math.floor(Math.random(hands) * 4);
+    console.log(hand)
+}
+
+
+let hands = ["rock", "paper", "scissor"]
+
+function randomHand() {
+    return hands[Math.floor(Math.random()*hands.length)];
+}
+
+//Tutorial uses this solution --->
+function getHand() {
+    let randomIndex = Math.floor( Math.random() * 3)
+    return hands[randomIndex]
+}
+
+
+
+let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+
+// Create a function that puts the apples onto the appleShelf
+// and the oranges onto the orangeShelf. Use a for loop,
+// a conditional statement, and the textContent property.
+
+function sortFruits() {
+    //the for loop goes through each array item
+    for (let i = 0; i < fruit.length; i++){
+         //the conditional sorts it
+         if (fruit === "🍎") {        
+    //the textContent puts it on the shelf
+             return appleShelf.textContent += fruit[i];
+         } else {
+             return orangeShelf.textContent += fruit[i];
+         }
+        
+    }
