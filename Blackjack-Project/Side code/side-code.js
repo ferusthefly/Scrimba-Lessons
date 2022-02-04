@@ -184,3 +184,76 @@ rollDice()
 rollDice()
 rollDice()
 
+let hasSolvedChallenge = false
+let hasHintsLeft = false
+
+// Create an if statement that checks that both variables are false.
+// If so, run the showSolution() function
+//the && means both statements must be true --- this AND that
+if (hasSolvedChallenge === false && hasHintsLeft === false) {
+    showSolution()
+}
+
+function showSolution() {
+    console.log("Showing the solution....")
+}
+
+// Create two boolean variables, likesDocumentaries and likesStartups
+let likesDocumentaries = true
+let likesStartups = false
+// Use an OR statement (||) to call recommendMovie() if either of those variables are true
+//the || means if either statement is true, run recommendMovie() --- If this OR that 
+if (likesDocumentaries === true || likesStartups === true) {
+    recommendMovie()
+}
+function recommendMovie() {
+    console.log("Hey, check out this new film we think you will like!")
+}
+
+//real world example of an object
+let course = {
+    title: "Learn CSS Grid for free",
+    lessons: 16,
+    creator: "Per Harald Borgen",
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ["html", "css"]
+}
+// Create an object that represents an airbnb castle listing.
+// It should contain at least one boolean, one string, one number, and one array
+// Log out at least two of the keys using the dot notation
+let castle = {
+    title: "San Guisto Abby",
+    isCastle: true,
+    guests: 4,
+    bedrooms: 2,
+    baths: 2,
+    beds: 2,
+    //common arrays are description bullet points, images in a slideshow, or reviews
+    tags: ["castle", "5 stars", "superhost"]
+
+}
+
+console.log(castle.title)
+console.log(castle.isCastle)
+
+//methods --- functions that are attached to objects
+
+// Create a person object that contains three keys: name, age, and county.
+let person = {
+    name: "Kyle",
+    age: 29,
+    country: "United States"
+}
+// Use yourself as an example to set the values for name, age, and country
+
+// Create a function, logData(), that uses the person object to create a
+function logData() {
+    return person.name + " is " + person.age + " years old and lives in " + person.country
+}
+
+// string in the following format: 
+// "Per is 35 years old and lives in Norway"
+
+// Call the logData() function to verify that it works
